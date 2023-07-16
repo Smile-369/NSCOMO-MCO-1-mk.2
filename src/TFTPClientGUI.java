@@ -14,7 +14,6 @@ public class TFTPClientGUI extends JFrame {
     private JLabel errorLabel;
 
     public TFTPClientGUI() {
-        // Set up GUI components
         serverIPField = new JTextField(15);
         remoteFilenameField = new JTextField(15);
         localFilenameField = new JTextField(15);
@@ -22,7 +21,6 @@ public class TFTPClientGUI extends JFrame {
         uploadButton = new JButton("Upload");
         errorLabel = new JLabel();
 
-        // Set up layout
         setLayout(new GridLayout(6, 2));
         add(new JLabel("Server IP:"));
         add(serverIPField);
@@ -35,7 +33,6 @@ public class TFTPClientGUI extends JFrame {
         add(new JLabel("Error:"));
         add(errorLabel);
 
-        // Set up button actions
         downloadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -62,7 +59,6 @@ public class TFTPClientGUI extends JFrame {
             }
         });
 
-        // Set up frame
         setTitle("TFTP Client");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
